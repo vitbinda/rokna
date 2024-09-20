@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        Knitting Calculator
+    </title>
+
+    <style>
+        body { text-align: left; }
+		table, th, td { border-spacing: 1em; }
+		body, output, input { font-size: 32px; color: white; }
+        body, output { background-color: #436870; }
+        input { background-color: #61868e; border: none; font-family: inherit; }
+        output, input { padding: 8px 8px; }
+    </style>
+        
+</head>
+
+<body>
+
+    <form oninput = "myFunction()" >
+		<table>
+		<tbody><tr>
+			<td>cm</td>
+			<td>stitches</td>
+		</tr>
+		<tr>
+			<td><input type="number" id="cm1" value="10" size="8"></td>
+			<td><input type="number" id="stitches1" value="20" size="8"></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="cm2" value="10" size="8"></td>
+			<td><output id="stitches2">20</output></td>
+		</tr>
+		<tr>
+			<td><output id="cm3" size="8">10</output></td>
+			<td><input type="number" id="stitches3" value="20" size="8"></td>
+		</tr>
+		</tbody></table>
+    </form>
+
+    <script>
+		
+		function myFunction() {
+			
+			// variables for input
+			let $cm1 = document.getElementById("cm1").value;
+			let $stitches1 = document.getElementById("stitches1").value;
+			let $cm2 = document.getElementById("cm2").value;
+			let $stitches3 = document.getElementById("stitches3").value;
+
+			// variables for output
+			let $stitches2 = ( $stitches1 / $cm1 ) * $cm2 ;
+			let $cm3 = ( $cm1 / $stitches1 ) * $stitches3 ;
+			
+			$stitches2 = parseFloat($stitches2.toFixed(2))
+			$cm3 = parseFloat($cm3.toFixed(2))
+	
+			// output
+			document.getElementById("stitches2").value = $stitches2 ;
+			document.getElementById("cm3").value = $cm3 ;
+		}
+
+	</script>
+
+
+</body></html>
