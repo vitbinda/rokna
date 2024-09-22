@@ -13,11 +13,11 @@
 
     <style>
         body { text-align: left; }
-		table, th, td { border-spacing: 1em; }
-		body, output, input { font-size: 32px; color: white; }
+		table, th, td { border-spacing: 0.7em; }
+		body, output, input { font-size: 28px; color: white; }
         body, output { background-color: #436870; }
         input { background-color: #61868e; border: none; font-family: inherit; }
-        output, input { padding: 8px 8px; }
+        output, input { padding: 7px 7px; }
     </style>
         
 </head>
@@ -29,18 +29,19 @@
 		<tbody><tr>
 			<td>cm</td>
 			<td>stitches</td>
+			<td></td>
 		</tr>
 		<tr>
-			<td><input type="number" id="cm1" value="10" size="8"></td>
-			<td><input type="number" id="stitches1" value="20" size="8"></td>
+			<td><input type="number" id="cm1" size="5"></td>
+			<td><input type="number" id="stitches1" size="5"></td>
 		</tr>
 		<tr>
-			<td><input type="number" id="cm2" value="10" size="8"></td>
-			<td><output id="stitches2">20</output></td>
+			<td><input type="number" id="cm2" size="5"></td>
+			<td><output id="stitches2"></output></td>
 		</tr>
 		<tr>
-			<td><output id="cm3" size="8">10</output></td>
-			<td><input type="number" id="stitches3" value="20" size="8"></td>
+			<td><output id="cm3"></output></td>
+			<td><input type="number" id="stitches3" size="5"></td>
 		</tr>
 		</tbody></table>
     </form>
