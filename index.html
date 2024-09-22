@@ -13,11 +13,11 @@
 
     <style>
         body { text-align: left; }
-		table, th, td { border-spacing: 0.5em; }
+		table { border-spacing: 20px; }
 		body, output, input { font-size: 28px; color: white; }
         body, output { background-color: #436870; }
-        input { background-color: #61868e; border: none; font-family: inherit; }
-        output, input { padding: 7px 7px; padding-left: 11px; }
+        input { background-color: #61868e; border: none; font-family: inherit; width: 134px }
+        output, input { padding: 7px 11px 7px 11px; }
     </style>
         
 </head>
@@ -32,16 +32,16 @@
 			<td>&nbsp;stitches</td>
 		</tr>
 		<tr>
-			<td><input type="number" id="cm1" size="5"></td>
-			<td><input type="number" id="stitches1" size="5"></td>
+			<td><input type="number" id="cm1"></td>
+			<td><input type="number" id="stitches1"></td>
 		</tr>
 		<tr>
-			<td><input type="number" id="cm2" size="5"></td>
+			<td><input type="number" id="cm2"></td>
 			<td><output id="stitches2"></output></td>
 		</tr>
 		<tr>
 			<td><output id="cm3"></output></td>
-			<td><input type="number" id="stitches3" size="5"></td>
+			<td><input type="number" id="stitches3"></td>
 		</tr>
 		</tbody></table>
     </form>
